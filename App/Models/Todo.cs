@@ -14,7 +14,7 @@ namespace TodoApp.Models
 
         public Todo(AddTodoDTO addTodoDTO)
         {
-            ExpiresAt = DateTime.Now;
+            ExpiresAt = addTodoDTO.ExpiresAt;
             Title = addTodoDTO.Title ?? string.Empty;
             Description = addTodoDTO.Description ?? string.Empty;
             Progress = 0;
