@@ -15,6 +15,12 @@ namespace TodoApp.Services
             _context = context;
         }
 
+        public async Task<List<TodoDTO>> GetAllTodos()
+        {
+            var todos = await _context.Todos.ToListAsync();
+            return todos.Select(todo => new TodoDTO(todo)).ToList();
+        }
+
         public async Task<TodoDTO> AddTodo(AddTodoDTO addTodoDTO)
         {
             var todo = new Todo(addTodoDTO);
