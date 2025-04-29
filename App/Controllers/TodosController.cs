@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Data;
+using TodoApp.DTO;
 using TodoApp.Models;
+using TodoApp.Services;
 
 namespace TodoApp.Controllers
 {
@@ -15,10 +17,12 @@ namespace TodoApp.Controllers
     public class TodosController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly TodoService _todoService;
 
-        public TodosController(AppDbContext context)
+        public TodosController(AppDbContext context, TodoService todoService)
         {
             _context = context;
+            _todoService = todoService;
         }
 
         // GET: api/Todos
@@ -73,15 +77,11 @@ namespace TodoApp.Controllers
             return NoContent();
         }
 
-        // POST: api/Todos
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Todo>> PostTodo(Todo todo)
+        public async Task<ActionResult<Todo>> PostTodo(AddTodoDTO todo)
         {
-            _context.Todos.Add(todo);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetTodo", new { id = todo.Id }, todo);
+            TodoDTO result = await _todoService.AddTodo(todo);
+            return Ok(result);
         }
 
         // DELETE: api/Todos/5
