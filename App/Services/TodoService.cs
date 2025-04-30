@@ -23,6 +23,14 @@ namespace TodoApp.Services
 
         public async Task<TodoDTO> AddTodo(AddTodoDTO addTodoDTO)
         {
+            if (string.IsNullOrWhiteSpace(addTodoDTO.Title))
+                throw new ArgumentException("Title cannot be empty.");
+
+            if (addTodoDTO.ExpiresAt <= DateTime.Now)
+            {
+                throw new ArgumentException("Expiration date must be in the future.");
+            }
+
             var todo = new Todo(addTodoDTO);
             _context.Add(todo);
             await _context.SaveChangesAsync();
