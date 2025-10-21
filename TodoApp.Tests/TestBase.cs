@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TodoApp.Data;
-using TodoApp.Services;
+using TodoApp.DAL.Data;
+using TodoApp.Infrastructure.Services;
 
 public class TestBase
 {

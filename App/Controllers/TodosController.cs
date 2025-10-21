@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TodoApp.DTO;
-using TodoApp.Enums;
-using TodoApp.Models;
-using TodoApp.Services;
+using TodoApp.Infrastructure.Enums;
+using TodoApp.Infrastructure.Interfaces;
 
 namespace TodoApp.Controllers
 {
@@ -10,9 +9,9 @@ namespace TodoApp.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
-        private readonly TodoService _todoService;
+        private readonly ITodoService _todoService;
 
-        public TodosController(TodoService todoService)
+        public TodosController(ITodoService todoService)
         {
             _todoService = todoService;
         }
@@ -103,7 +102,7 @@ namespace TodoApp.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Todo>> PostTodo(AddTodoDTO todo)
+        public async Task<ActionResult<TodoDTO>> PostTodo(AddTodoDTO todo)
         {
             if (todo == null)
             {

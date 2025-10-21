@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TodoApp.Data;
+using TodoApp.DAL.Data;
 using TodoApp.DTO;
-using TodoApp.Enums;
-using TodoApp.Models;
-using TodoApp.Services;
+using TodoApp.Infrastructure.Enums;
+using TodoApp.DAL.Models;
+using TodoApp.Infrastructure.Services;
 
 //tests written with help of Copilot but carefully reviewed, checked and improved for correctness and reliability
 
