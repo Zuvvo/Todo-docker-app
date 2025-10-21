@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "App\TodoApp.csproj", "{1C91B687-BB22-428D-AFFE-092001CEE47C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\TodoApp.csproj", "{1C91B687-BB22-428D-AFFE-092001CEE47C}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3364BE16-132D-458D-9294-A1F82A86F10D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Tests", "TodoApp.Tests\TodoApp.Tests.csproj", "{B42E3E4B-2271-4078-95AD-58910C493798}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.DTO", "..\TodoApp.DTO\TodoApp.DTO.csproj", "{24280F45-300E-40EF-A164-CE9BC55A9845}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.DTO", "TodoApp.DTO\TodoApp.DTO.csproj", "{24280F45-300E-40EF-A164-CE9BC55A9845}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Infrastructure", "..\TodoApp.Infrastructure\TodoApp.Infrastructure.csproj", "{D4A12802-120D-4428-9F37-B9AED90B4CCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Infrastructure", "TodoApp.Infrastructure\TodoApp.Infrastructure.csproj", "{D4A12802-120D-4428-9F37-B9AED90B4CCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.DAL", "..\TodoApp.DAL\TodoApp.DAL.csproj", "{22F4146E-5673-435A-8ABF-D7B9ACB1815D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.DAL", "TodoApp.DAL\TodoApp.DAL.csproj", "{22F4146E-5673-435A-8ABF-D7B9ACB1815D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

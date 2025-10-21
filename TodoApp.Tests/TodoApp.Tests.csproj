@@ -26,6 +26,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\App\TodoApp.csproj" />
+    <ProjectReference Include="..\TodoApp.DAL\TodoApp.DAL.csproj" />
+    <ProjectReference Include="..\TodoApp.DTO\TodoApp.DTO.csproj" />
+    <ProjectReference Include="..\TodoApp.Infrastructure\TodoApp.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
